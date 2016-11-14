@@ -19,15 +19,15 @@ public class Main {
         double temperatura = 0;
         double total = 0;
         double media = 0;
-
+        final int HORAS=24;
         for (int i = 0; i < 24; i++) {
 
 
-            System.out.print("Escribe la temperatura de las " + i);
+            System.out.print("Escribe la temperatura de las " +i+": ");
             temperatura = Double.parseDouble(br.readLine());
 
             total = (total + temperatura);
-            media = total / 24;
+            media = total / HORAS;
             temperaturas[i] = temperatura;
 
             if (temperatura < min) {
@@ -36,7 +36,7 @@ public class Main {
                 max = temperatura;
             }
         }
-        for (int i = 0; i < 24; i++) {
+        for (int i = 0; i < HORAS; i++) {
             System.out.print(i);
 
             System.out.print("  ");
